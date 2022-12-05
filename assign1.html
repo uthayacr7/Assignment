@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>Assignment 1</title>
+
+<style type="text/css">
+	body{counter-reset: Serial;}
+	table{border-collapse: separate;
+		width: 100px;
+		height: 100px;
+		margin-top: 100px;}
+		h2{margin-left: 400px;}
+		tr td:first-child:before
+		{
+			counter-increment: Serial;
+			content: "Serial is:"counter(Serial);
+		}
+		.auto-index td:first-child:before
+		{
+			counter-increment: Serial;
+			content: "  "counter(Serial);
+		}
+	table th, td { width: 0px;
+      height: 0px;
+		border:1px solid black;
+		border-collapse: collapse;
+	}
+	
+</style>
+
+</head>
+<body>
+<div class="container">
+<h2>Assignment 1</h2>
+<table class=" auto-index  table table-sm" >
+	<thead>
+		<tr>
+			<th colspan="2">SL.NO</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>City</th>
+			<th>Country</th>
+		</tr>		
+	</thead>
+<tbody>	
+	<tr>
+		<td> </td>
+		<td><button type="button" class="button btn-info">Add row to top</button></td>
+		<td>Joseph </td>
+		<td>Vijay</td>
+		<td>Chennai</td>
+		<td>India</td>
+	</tr>
+    <tr>
+		<td></td>
+		<td><button type="button" class="button btn-primary">Add row to bottom</button></td>
+		<td>Ajith</td>
+		<td>Kumar</td>
+		<td>Chennai</td>
+		<td>India</td>
+	</tr>
+     <tr>
+		<td></td>
+		<td></td>
+		<td>Dhanush</td>
+		<td>Kumar</td>
+		<td>Chennai</td>
+		<td>India</td>
+	</tr>
+	 <tr>
+		<td></td>
+		<td></td>
+		<td>Sachin</td>
+		<td>Tendulkar</td>
+		<td>Mumbai</td>
+		<td>India</td>
+	</tr>
+	 <tr>
+		<td></td>
+		<td></td>
+		<td>Aiswarya</td>
+		<td>Lakshmi</td>
+		<td>Kerala</td>
+		<td>India</td>
+	</tr>
+</tbody>
+</table>
+</div>
+
+<script type="text/javascript">
+	var addSerialNumber=function(){
+		$('table tr').each(function(index)){
+			$(this).find('td:nth-child(1)').html(index+1);
+		};
+	};
+	addSerialNumber();
+</script>
+
+
+
+
+
+</body>
+</html>
